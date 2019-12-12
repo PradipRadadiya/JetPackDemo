@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFrg">
+
+    <fragment
+        android:id="@+id/mainFrg"
+        android:name="com.d.jetpacknavigationdemo.MainFrg"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFrg_to_firstFrg"
+            app:destination="@id/firstFrg" />
+
+        <action
+            android:id="@+id/action_mainFrg_to_secondFrg"
+            app:destination="@id/secondFrg" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/firstFrg"
+        android:name="com.d.jetpacknavigationdemo.FirstFrg"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_first_frg" />
+    <fragment
+        android:id="@+id/secondFrg"
+        android:name="com.d.jetpacknavigationdemo.SecondFrg"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second_frg" >
+        <action
+            android:id="@+id/action_secondFrg_to_thirdFrg"
+            app:destination="@id/thirdFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFrg"
+        android:name="com.d.jetpacknavigationdemo.ThirdFrg"
+        android:label="Third Fragmnent"
+        tools:layout="@layout/fragment_third_frg" />
+</navigation>
